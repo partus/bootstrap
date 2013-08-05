@@ -9,6 +9,13 @@
 
 // Grays
 // -------------------------
+@first: #B10109;//#FFE4C5;
+@second: #26140c;
+@third: #A40202;
+@third2: darken(@third,15%);
+@other: #F3E9E1;
+@other2: #D2C094;
+
 @black:                 #000;
 @grayDarker:            #222;
 @grayDark:              #333;
@@ -32,13 +39,13 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @second;
 @textColor:             @grayDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @first;//#08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -94,8 +101,8 @@
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              @third;
+@btnSuccessBackgroundHighlight:     @third2;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -105,6 +112,10 @@
 
 @btnInverseBackground:              #444;
 @btnInverseBackgroundHighlight:     @grayDarker;
+
+@btnModniBackground:              @other2;
+@btnModniBackgroundHighlight:     darken(@btnModniBackground,10%);
+@btnModniText:              @third2;
 
 
 // Forms
@@ -195,16 +206,16 @@
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                @third;
+@navbarInverseBackgroundHighlight:       @third2;
+@navbarInverseBorder:                    @third;
 
 @navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColor:                 #fff;
+@navbarInverseLinkColorHover:            @other;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackgroundHighlight;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
 @navbarInverseSearchBackgroundFocus:     @white;
@@ -212,8 +223,9 @@
 @navbarInverseSearchPlaceholderColor:    #ccc;
 
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
-
-
+@navPillBackgroundColor:					#740103;
+@navPillLinkColor: 							@other;
+@navPillLinkHoverColor: @navPillBackgroundColor;
 // Pagination
 // -------------------------
 @paginationBackground:                #fff;
