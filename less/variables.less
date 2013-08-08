@@ -11,25 +11,29 @@
 // -------------------------
 @first: #423003;//#FFE4C5;
 @second: #402F01;
-@third: #402F01;
+@third: #412f00;
 @third2: darken(@third,15%);
-@other: #FFF8E1;//#F3EEE1;
-@other2: #FFF7E1;//#D2C094;
-@bdColor: #B7A36F;
+@other: #CEC6C0;//#F3EEE1;
+@other2: #CEC6C0;//#D2C094;
+@bdColor: #4A3C31;
+
+@cartTxtColor: #D8c690;
 
 .maBrand{
-	color: #2A1F01;
+	color: #D8c690;
 }
 
+
+
 @navPillBackgroundColor:					#2A1F01;
-@navPillLinkColor: 							@other;
+@navPillLinkColor: 							#D8c690;
 @navPillLinkHoverColor: @navPillBackgroundColor;
 
 
 @black:                 #000;
 @grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #555;
+@grayDark:              #322400; //#261C00; //#333;
+@gray:                  #322400;//#524F22;//#555;
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
@@ -51,6 +55,7 @@
 // -------------------------
 @bodyBackground:        @second;
 @textColor:             @grayDark;
+@helpInlineColor:        #524F22;//e.g. price color
 
 
 // Links
@@ -113,6 +118,8 @@
 
 @btnSuccessBackground:              @third;
 @btnSuccessBackgroundHighlight:     @third2;
+@btnSuccessText: @cartTxtColor;
+
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -123,9 +130,9 @@
 @btnInverseBackground:              #444;
 @btnInverseBackgroundHighlight:     @grayDarker;
 
-@btnModniBackground:              @other2;
-@btnModniBackgroundHighlight:     darken(@btnModniBackground,10%);
-@btnModniText:              @third2;
+@btnModniBackground:              lighten(#4A3C31,15%);
+@btnModniBackgroundHighlight:     #4A3C31;//darken(@btnModniBackground,10%);
+@btnModniText:              @other;//@cartTxtColor;
 
 
 // Forms
@@ -220,8 +227,8 @@
 @navbarInverseBackgroundHighlight:       @third2;
 @navbarInverseBorder:                    @third;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 #fff;
+@navbarInverseText:                      #D8CF90;
+@navbarInverseLinkColor:                 #D8CF90;
 @navbarInverseLinkColorHover:            @other;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
