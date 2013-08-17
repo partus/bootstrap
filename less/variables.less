@@ -151,6 +151,12 @@
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                darken(@btn-info-bg, 5%);
 
+@btn-modni-color:                 @other;
+@btn-modni-bg:                    lighten(#4A3C31,15%);
+@btn-modni-border:                darken(@btn-modni-bg, 5%);
+
+
+
 @btn-link-disabled-color:        @gray-light;
 
 
@@ -290,7 +296,7 @@
 //
 // Reset inverted navbar basics
 
-@navbar-inverse-color:                      #D8CF90;
+@navbar-inverse-color:                      #2A1F01;
 @navbar-inverse-bg:                         @third;
 
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
@@ -322,7 +328,24 @@
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
 @navbar-inverse-toggle-border-color:        #333;
 
+// Inverted navbar (bootstrap  2.3)
+@navbarInverseBackground:                @third;
+@navbarInverseBackgroundHighlight:       @third2;
+@navbarInverseBorder:                    @third;
 
+@navbarInverseText:                      #D8CF90;
+@navbarInverseLinkColor:                 #D8CF90;
+@navbarInverseLinkColorHover:            @other;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackgroundHighlight;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    #ccc;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
 
 
 
@@ -354,7 +377,10 @@
 @nav-pills-active-link-hover-bg:            @component-active-bg;
 @nav-pills-active-link-hover-color:         #fff;
 
-
+@navPillBackgroundColor:					#2A1F01;
+@navPillLinkColor: 							#D8c690;
+@navPillLinkHoverColor: @navPillBackgroundColor;
+@navPillBackgroundHoverColor:					@body-bg;
 // Pagination
 // -------------------------
 
