@@ -75,7 +75,8 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['less/bootstrap.less'],
-        dest: 'dist/css/<%= pkg.name %>.css'
+        //dest: 'dist/css/<%= pkg.name %>.css'
+        dest: '/home/archie/develop/multishop/client/avendor/<%= pkg.name %>.css'
       },
       min: {
         options: {
