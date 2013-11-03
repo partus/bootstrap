@@ -126,6 +126,14 @@
     // Links rendered as pills
     > a {
       border-radius: @nav-pills-border-radius;
+      &:hover,
+      &:focus {
+        color: @navPillBackgroundColor;
+        background-color: @navPillBackgroundHoverColor
+      }      
+      border-radius: 5px;
+      background-color: @navPillBackgroundColor;
+      color: @navPillLinkColor;
     }
     + li {
       margin-left: 2px;

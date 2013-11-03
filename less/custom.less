@@ -1,0 +1,260 @@
+.first-color {
+	background-color: @other;
+}
+.hov-hi:hover {
+	border-color: #322400;
+}
+
+.hov-hi {
+	border-color: darken(#CEC6C0, 10%);//#0088CC;
+}
+
+.other2-color {
+	background-color: @other2;
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+}
+
+.bottom-padding{
+	height: 60px;
+	margin-top: -30px;
+	background-color: @bdColor;
+	z-index: 2;
+	position: relative;
+}
+
+.scroll-fix-top{
+  position: relative;
+  z-index: 100; 
+}
+
+.navbar-inverse-old {
+
+ 
+    #gradient > .vertical(@navbarInverseBackgroundHighlight, @navbarInverseBackground);
+    border-color: @navbarInverseBorder;
+  
+
+  .brand,
+  .nav > li > a {
+    color: @navbarInverseLinkColor;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    &:hover,
+    &:focus {
+      color: @navbarInverseLinkColorHover;
+    }
+  }
+
+  .brand {
+    color: @navbarInverseBrandColor;
+  }
+
+  .navbar-text {
+    color: @navbarInverseText;
+  }
+
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: @navbarInverseLinkBackgroundHover;
+    color: @navbarInverseLinkColorHover;
+  }
+
+  .nav .active > a,
+  .nav .active > a:hover,
+  .nav .active > a:focus {
+    color: @navbarInverseLinkColorActive;
+    background-color: @navbarInverseLinkBackgroundActive;
+  }
+
+  // Inline text links
+  .navbar-link {
+    color: @navbarInverseLinkColor;
+    &:hover,
+    &:focus {
+      color: @navbarInverseLinkColorHover;
+    }
+  }
+
+  // Dividers in navbar
+  .divider-vertical {
+    border-left-color: @navbarInverseBackground;
+    border-right-color: @navbarInverseBackgroundHighlight;
+  }
+
+  // Dropdowns
+  .nav li.dropdown.open > .dropdown-toggle,
+  .nav li.dropdown.active > .dropdown-toggle,
+  .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: @navbarInverseLinkBackgroundActive;
+    color: @navbarInverseLinkColorActive;
+  }
+  .nav li.dropdown > a:hover .caret,
+  .nav li.dropdown > a:focus .caret {
+    border-top-color: @navbarInverseLinkColorActive;
+    border-bottom-color: @navbarInverseLinkColorActive;
+  }
+  .nav li.dropdown > .dropdown-toggle .caret {
+    border-top-color: @navbarInverseLinkColor;
+    border-bottom-color: @navbarInverseLinkColor;
+  }
+  .nav li.dropdown.open > .dropdown-toggle .caret,
+  .nav li.dropdown.active > .dropdown-toggle .caret,
+  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+    border-top-color: @navbarInverseLinkColorActive;
+    border-bottom-color: @navbarInverseLinkColorActive;
+  }
+
+  // Navbar search
+  .navbar-search {
+    .search-query {
+      color: @white;
+      background-color: @navbarInverseSearchBackground;
+      border-color: @navbarInverseSearchBorder;
+      .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)");
+      .transition(none);
+      .placeholder(@navbarInverseSearchPlaceholderColor);
+
+      // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
+      &:focus,
+      &.focused {
+        padding: 5px 15px;
+        color: @gray-dark;
+        text-shadow: 0 1px 0 @white;
+        background-color: @navbarInverseSearchBackgroundFocus;
+        border: 0;
+        .box-shadow(0 0 3px rgba(0,0,0,.15));
+        outline: 0;
+      }
+    }
+  }
+
+  // Navbar collapse button
+
+}
+
+.gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: @textColor;
+  text-shadow: @textShadow;
+  #gradient > .vertical(@primaryColor, @secondaryColor);
+  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+// Reset filters for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+
+.buttonBackground(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  .gradientBar(@startColor, @endColor, @textColor, @textShadow);
+  *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  .reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: @textColor;
+    background-color: @endColor;
+    *background-color: darken(@endColor, 5%);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+  }
+}
+
+@btnSuccessBackground:              @third;
+@btnSuccessBackgroundHighlight:     @third2;
+@btnSuccessText: @cartTxtColor;
+
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight,@btnSuccessText);
+}
+// Info appears as a neutral blue
+
+@btnModniBackground:              lighten(#4A3C31,15%);
+@btnModniBackgroundHighlight:     #4A3C31;//darken(@btnModniBackground,10%);
+@btnModniText:              @other;//@cartTxtColor;
+
+.btn-modni {
+  .buttonBackground(@btnModniBackground, @btnModniBackgroundHighlight,@btnModniText);
+}
+.modal-shown {
+  .modal();
+  display: block;
+}
+
+// Extra small grid
+//
+// Grid classes for extra small devices like smartphones. No offset, push, or
+// pull classes are present here due to the size of the target.
+//
+// Note that `.col-xs-12` doesn't get floated on purpose—there's no need since
+// it's full-width.
+
+.fixed-height{
+  height: 50px;
+}
+
+.max-height{
+  max-height: 90px;
+  overflow: hidden;
+}
+
+
+
+
+@media (min-width: @screen-tablet) {
+.fixed-height{
+  height: 50px;
+}
+}
+
+
+
+@media (min-width: @screen-desktop) {
+ 
+
+.fixed-height{
+  max-height: 80px;
+}
+
+}
+
+
+
+@media (min-width: @screen-large-desktop) {
+
+
+.fixed-height{
+  height: 100px;
+}
+
+}
+
+.splash {
+  width: 90%;
+  .first-color();
+  margin-top: -4em;
+  margin-left: -45%;
+  position: fixed;
+  z-index: 3000;
+  top: 50%;
+  left: 50%;
+}
+
+
+@media (min-width: @screen-tablet) {
+.splash {
+  width: 400px;
+  margin-left: -200px;
+}
+}
+
+
