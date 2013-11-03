@@ -210,7 +210,7 @@
 
 
 
-@media (min-width: @screen-tablet) {
+@media (min-width: @screen-sm) {
 .fixed-height{
   height: 50px;
 }
@@ -218,7 +218,7 @@
 
 
 
-@media (min-width: @screen-desktop) {
+@media (min-width: @screen-md) {
  
 
 .fixed-height{
@@ -229,7 +229,7 @@
 
 
 
-@media (min-width: @screen-large-desktop) {
+@media (min-width: @screen-lg) {
 
 
 .fixed-height{
@@ -258,3 +258,22 @@
 }
 
 
+.fixed-height-1 {
+  height: @padding-base-horizontal;
+}
+
+.shop-item {
+  height: 100px;
+  overflow: hidden;
+  .col-sm-3 {
+    img {
+      display: table-cell;
+      vertical-align: middle;
+      height: auto;
+      width: auto;
+      max-height: 90px;
+      max-width: 100%;
+    }
+    display: table;
+  }
+}
