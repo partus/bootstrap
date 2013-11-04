@@ -12,9 +12,9 @@
 @second: #402F01;
 @third: #412f00;
 @third2: darken(@third,15%);
-@other: #CEC6C0;//#F3EEE1;
-@other2: #CEC6C0;//#D2C094;
-@bdColor: #4A3C31;
+@other: #F1E8DB;//#F3EEE1;
+@other2: #F1E8DB;//#D2C094;
+@bdColor: #FAF6EE;
 
 
 @gray-darker:            lighten(#000, 13.5%); // #222
@@ -24,13 +24,13 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 .maBrand{
-	color: #D8c690;
+	color: #f1e8db;
 }
 
-@cartTxtColor: #D8c690;
+@cartTxtColor: #f1e8db;
 
 @navPillBackgroundColor:					#2A1F01;
-@navPillLinkColor: 							#D8c690;
+@navPillLinkColor: 							#f1e8db;
 @navPillLinkHoverColor: @navPillBackgroundColor;
 
 
@@ -55,7 +55,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #CEC6C0;
+@body-bg:               #F1E8DB;
 @text-color:            @gray-dark;
 
 // Links
@@ -222,7 +222,6 @@
 
 @dropdown-caret-color:           #000;
 
-
 // COMPONENT VARIABLES
 // --------------------------------------------------
 
@@ -330,7 +329,7 @@
 
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #D8CF90;
+@navbar-inverse-link-color:                 #F5E6C6;
 @navbar-inverse-link-hover-color:           @other;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
@@ -353,20 +352,23 @@
 @navbarInverseBackgroundHighlight:       @third2;
 @navbarInverseBorder:                    @third;
 
-@navbarInverseText:                      #D8CF90;
-@navbarInverseLinkColor:                 #D8CF90;
+@navbarInverseText:                      #F5E6C6;
+@navbarInverseLinkColor:                 #F5E6C6;
 @navbarInverseLinkColorHover:            @other;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
 @navbarInverseLinkBackgroundActive:      @navbarInverseBackgroundHighlight;
 
-@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
-@navbarInverseSearchBackgroundFocus:     @white;
-@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, -5%);
+@navbarInverseSearchBackgroundFocus:     #F5E6C6;
+@navbarInverseSearchBorder:              darken(@navbarInverseBackground, 10%);
 @navbarInverseSearchPlaceholderColor:    #ccc;
 
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
 
+@navbar-inverse-slider-track: @navbarInverseSearchBackgroundFocus;
+@navbar-inverse-slider-handle: darken(@navbarInverseText,10%);
+@navbar-inverse-slider-selection: @navbarInverseSearchBackground;
 
 
 // Navs
@@ -399,7 +401,7 @@
 @nav-pills-active-link-hover-color:         @component-active-color;
 
 @navPillBackgroundColor:					#2A1F01;
-@navPillLinkColor: 							#D8c690;
+@navPillLinkColor: 							#f1e8db;
 @navPillLinkHoverColor: @navPillBackgroundColor;
 @navPillBackgroundHoverColor:					@body-bg;
 // Pagination
