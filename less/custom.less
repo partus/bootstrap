@@ -17,6 +17,8 @@
 	position: fixed;
 	top: 0px;
 	z-index: 100;
+  right: 0px;
+  left: 0px;
 }
 
 .bottom-padding{
@@ -28,7 +30,6 @@
 }
 
 .scroll-fix-top{
-  position: relative;
   z-index: 100; 
 }
 
@@ -104,13 +105,57 @@
   overflow: hidden;
 }
 
+.shop-product-image {
+    position: relative; 
+    img {
+      height: 100%;
+      width: 100%;
+    }
+}
+@media (max-width: @screen-sm){
+  .shop-product-image {
+    width: 70px;
+  }
+}
+.main-logo {
+  margin: 20px; 
+  margin-left: 50px;
+  height: 6em;
+}
+@media (max-width: @screen-sm){
+  
+  .main-logo {
+    height: 2.5em;
+    margin-left: 10px;
+    margin: 7px;
+  }
+  .nav-pills {
+    font-size: 90%;
+  }
+  .smallCart {
+    font-size: 90%;
+  }
+  .filterPCl  {
+    display: inline-block;
+  }
+  .nav-pills {
+    li {
+      width: 40%;
+      margin-top: 5px;
 
+    }
+  } 
+}
 
 
 @media (min-width: @screen-sm) {
 .fixed-height{
   height: 50px;
 }
+.shop-product-image {
+  height: 121px;
+}
+
 }
 
 
@@ -120,6 +165,9 @@
 
 .fixed-height{
   max-height: 80px;
+}
+.shop-product-image {
+  background: url(images/spinner.gif) no-repeat center center; 
 }
 
 }
@@ -131,6 +179,9 @@
 
 .fixed-height{
   height: 100px;
+}
+.shop-product-image {
+  height: 200px; 
 }
 
 }
@@ -187,7 +238,6 @@
 }
 
 .navbarWraper .scroll-fix-top {
-  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -205,4 +255,12 @@
 
 .navbar-stations .text-center {
   font-size: 50%;
+}
+
+.shop-products {
+
+}
+.separator{
+  height: 3px;
+  background-color: #271C00; 
 }
