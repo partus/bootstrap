@@ -1,0 +1,23 @@
+// usage .rest-logo(style='background-image: url("http://img.fd.am/d0b1856e-3147-4dc2-adcc-6301d7f71f2c");')
+
+.rest-logo {
+    background-image: url("http://img.fd.am/d0b1856e-3147-4dc2-adcc-6301d7f71f2c");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+}
+
+.rest-logo-style(@min-width, @image-height) {
+  @media (min-width: @min-width) {
+    .rest-logo{
+      height: @image-height;
+    }
+  }
+  
+}
+
+.rest-logo-style(@screen-sm, 74px);
+.rest-logo-style(@screen-md,100px);
+.rest-logo-style(@screen-lg,125px);
+
