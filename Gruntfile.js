@@ -156,7 +156,7 @@ module.exports = function (grunt) {
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
         files: {
-          '/home/user/dev/insight/InSight-Multi-Modal/framework/client/lib/bootstrap/bootstrap.css': 'less/bootstrap.less'
+          '/home/user/dev/InSight-Multi-Modal/framework/client/lib/bootstrap/bootstrap.css': 'less/bootstrap.less'
         }
       },
       compileTheme: {

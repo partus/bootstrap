@@ -1,0 +1,42 @@
+body {
+          padding-top: 50px;
+          /*position: relative;*/
+      }
+      
+pre {
+    tab-size: 8;
+}
+
+@media screen and (max-width: @grid-float-breakpoint-max) {
+    .side-collapse-container{
+        width:100%;
+        position:relative;
+        left:0;
+        transition:left .4s;
+    }
+    .side-collapse-container.out{
+        left:240px;
+    }
+    .side-collapse {
+        top:50px;
+        bottom:0;
+        left:0;
+        width:240px;
+        position:fixed;
+        overflow:hidden;
+        transition:width .4s;
+        /*background: white;*/
+    }
+    .side-collapse.in {
+        width:0;
+    }
+    #login-dropdown-list .dropdown-menu {
+      min-width: 230px;
+    }
+    .side-collapse .navbar-collapse {
+      max-height: none;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+}
